@@ -12,18 +12,19 @@ module.exports = {
 
 //helper functions
 
-function add(user){
-    return null;
-}
 
 function find(){
-    return null;
+    return db('users').select('id', 'username');
 }
 
 function findById(id){
-    return null;
+    return db('users').where({ id }).first();
 }
 
+async function add(user){
+    const [id] = await db('users').insert(user);
+    return findById;
+}
 function remove(id){
-    return null;
+    return db('users').where('id', id).del();
 }

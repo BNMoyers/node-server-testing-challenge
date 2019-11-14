@@ -26,20 +26,20 @@ describe("userRouter", function() {
     });
   });
 
-   describe(" DELETE /users", function() {
-    it("should return 200 OK", function() {
-      return request(userRouter)
-        .delete("/users")
-        .then(res => {
-          expect(res.status).toBe(200);
-        });
-    });
-    it("should return JSON formatted response", function() {
-      return request(userRouter)
-        .post("/users")
-        .then(res => {
-          expect(res.type).toMatch(/json/i);
-        });
-    });
-  });
+//    describe(" DELETE /users", function() {
+//     it("should return 200 OK", function() {
+//       return request(userRouter)
+//         .delete("/users")
+//         .then(res => {
+//           expect(res.status).toBe(200);
+//         });
+//     });
+//     it("should return JSON formatted response", function() {
+//       return request(userRouter)
+//         .post("/users")
+//         .then(res => {
+//           expect(res.type).toMatch(/json/i);
+//         });
+//     });
+//   });
 });
